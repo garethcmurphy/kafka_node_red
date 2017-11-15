@@ -1,0 +1,61 @@
+[
+    {
+        "id": "ada63ab9.b0cbf8",
+        "type": "kafka in",
+        "z": "ac4d6a53.be8fe8",
+        "zkquorum": "zookeeper:2181",
+        "topics": "test",
+        "groupId": "null",
+        "debug": "",
+        "autoCommit": true,
+        "x": 293.5,
+        "y": 403,
+        "wires": [
+            [
+                "5b459281.8a263c"
+            ]
+        ]
+    },
+    {
+        "id": "5b459281.8a263c",
+        "type": "debug",
+        "z": "ac4d6a53.be8fe8",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 691.5,
+        "y": 390,
+        "wires": []
+    },
+    {
+        "id": "c030418b.40376",
+        "type": "kafka",
+        "z": "ac4d6a53.be8fe8",
+        "zkquorum": "zookeeper:2181",
+        "topics": "test",
+        "debug": "",
+        "x": 783.5,
+        "y": 109,
+        "wires": []
+    },
+    {
+        "id": "57f599cb.396de8",
+        "type": "inject",
+        "z": "ac4d6a53.be8fe8",
+        "name": "",
+        "topic": "",
+        "payload": "odin",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 350,
+        "y": 140,
+        "wires": [
+            [
+                "c030418b.40376"
+            ]
+        ]
+    }
+]
